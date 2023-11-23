@@ -33,8 +33,6 @@ Std_ReturnType ADC_Inti(const ADC_config_t *_adc){
         ADC_input_channel_port_config(_adc->ADC_channel);
         
         #if ADC_INT_FEATURE_ENABLE==INT_FEATURE_ENABLE
-        INT_GlobalInterruptEnable();
-        INT_PeripheralInterruptEnable();
         ADC_InterruptEnable();
         ADC_INTERRUPTFlagClear();
         
@@ -42,6 +40,9 @@ Std_ReturnType ADC_Inti(const ADC_config_t *_adc){
         if(INT_HIGH_PRIORITY == _adc->priority){ ADC_HighPriorityset(); }
         else if(INT_LOW_PRIORITY == _adc->priority){ ADC_LowPriorityset(); }
         else {}
+        #else
+        INT_GlobalInterruptEnable();
+        INT_PeripheralInterruptEnable()
         #endif
         ADC_InterruptHandler = *_adc->ADC_InterruptHandler;
         #endif
