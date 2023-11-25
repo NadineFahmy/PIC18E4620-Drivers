@@ -82,7 +82,7 @@ Std_ReturnType TMR0_DeInti(const timer0_t *_timer){
     return ret;
 };
 
-Std_ReturnType TMR0_Write_Value(const timer0_t *_timer, u8 _value){
+Std_ReturnType TMR0_Write_Value(const timer0_t *_timer, u16 _value){
     
     Std_ReturnType ret = E_NOT_OK;
     
@@ -100,7 +100,7 @@ Std_ReturnType TMR0_Write_Value(const timer0_t *_timer, u8 _value){
     return ret;
 };
 
-Std_ReturnType TMR0_Read_Value(const timer0_t *_timer, u8 *_value){
+Std_ReturnType TMR0_Read_Value(const timer0_t *_timer, u16 *_value){
     
     Std_ReturnType ret = E_NOT_OK;
     u8 l_tmr0l = 0, l_tmr0h = 0;
