@@ -73,8 +73,8 @@ typedef struct {
 /*Section : Function Declaration */
 Std_ReturnType TMR0_Inti(const timer0_t *_timer);
 Std_ReturnType TMR0_DeInti(const timer0_t *_timer);
-Std_ReturnType TMR0_Write_Value(const timer0_t *_timer, u8 _value);
-Std_ReturnType TMR0_Read_Value(const timer0_t *_timer, u8 *_value);
+Std_ReturnType TMR0_Write_Value(const timer0_t *_timer, u16 _value);
+Std_ReturnType TMR0_Read_Value(const timer0_t *_timer, u16 *_value);
 
 #endif	/* HAL_TIMER0_H */
 
