@@ -54,7 +54,7 @@ Std_ReturnType ADC_Inti(const ADC_config_t *_adc){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 Std_ReturnType ADC_DeInti(const ADC_config_t *_adc){
     
@@ -74,7 +74,7 @@ Std_ReturnType ADC_DeInti(const ADC_config_t *_adc){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 Std_ReturnType ADC_SelectChannel(const ADC_config_t *_adc, ADC_channel_select_t channel){
     
@@ -91,7 +91,7 @@ Std_ReturnType ADC_SelectChannel(const ADC_config_t *_adc, ADC_channel_select_t 
         ret = E_OK;
     }
     return ret;
-};
+}
 
 Std_ReturnType ADC_StartConversion(const ADC_config_t *_adc){
     
@@ -106,7 +106,7 @@ Std_ReturnType ADC_StartConversion(const ADC_config_t *_adc){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 Std_ReturnType ADC_IsConversionDone(const ADC_config_t *_adc, u8 *conversion_status){
     
@@ -122,7 +122,7 @@ Std_ReturnType ADC_IsConversionDone(const ADC_config_t *_adc, u8 *conversion_sta
         ret = E_OK;
     }
     return ret;
-};
+}
 
 Std_ReturnType ADC_GetConversionResult(const ADC_config_t *_adc, adc_result_t *conversion_result){
     
@@ -148,7 +148,7 @@ Std_ReturnType ADC_GetConversionResult(const ADC_config_t *_adc, adc_result_t *c
         ret = E_OK; 
     }
     return ret;
-};
+}
 
 Std_ReturnType ADC_GetConversion_Blocking(const ADC_config_t *_adc, ADC_channel_select_t channel, adc_result_t *conversion_result){
     
@@ -167,7 +167,7 @@ Std_ReturnType ADC_GetConversion_Blocking(const ADC_config_t *_adc, ADC_channel_
         ret = ADC_GetConversionResult(_adc, conversion_result);
     }
     return ret;
-};
+}
 
 Std_ReturnType ADC_StartConversion_Interrupt(const ADC_config_t *_adc, ADC_channel_select_t channel){
     
@@ -182,7 +182,7 @@ Std_ReturnType ADC_StartConversion_Interrupt(const ADC_config_t *_adc, ADC_chann
         ret = ADC_StartConversion(_adc);
     }
     return ret;
-};
+}
 
 static inline void ADC_input_channel_port_config(ADC_channel_select_t channel){
     switch(channel){
@@ -200,7 +200,7 @@ static inline void ADC_input_channel_port_config(ADC_channel_select_t channel){
         case ADC_CHANNEL_AN11 : SET_BIT(TRISB, _TRISA_RA4_POSN); break;
         case ADC_CHANNEL_AN12: SET_BIT(TRISB, _TRISA_RA0_POSN); break;
     }
-};
+}
 
 static inline void select_result_format(const ADC_config_t *_adc){
     if(ADC_RESULT_RIGHT == _adc->result_format){
@@ -212,7 +212,7 @@ static inline void select_result_format(const ADC_config_t *_adc){
     else { 
         ADC_RESULT_RIGHT_FORMAT();
     }
-};
+}
 
 static inline void config_voltage_referance(const ADC_config_t *_adc){
     if(ADC_VOLTAGE_REFERANCE_ENABLE == _adc->voltage_referance){
@@ -224,11 +224,11 @@ static inline void config_voltage_referance(const ADC_config_t *_adc){
     else { 
         ADC_DISABLE_VOLTAGE_REFERANCE();
     }
-};
+}
 
 void ADC_ISR(void){
     ADC_INTERRUPTFlagClear();
     if(ADC_InterruptHandler){
         ADC_InterruptHandler();
     }
-};
+}
