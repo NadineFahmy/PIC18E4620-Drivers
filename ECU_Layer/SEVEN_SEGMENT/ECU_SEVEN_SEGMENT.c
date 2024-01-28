@@ -21,7 +21,7 @@ Std_ReturnType SEVEN_SEGMENT_inti(const segment_t *segment){
         ret = GPIO_pin_inti( &(segment->segment_pins[3]) );
     }
     return ret;
-};
+}
 
 Std_ReturnType SEVEN_SEGMENT_write_number(const segment_t *segment, u8 number){
     
@@ -37,4 +37,4 @@ Std_ReturnType SEVEN_SEGMENT_write_number(const segment_t *segment, u8 number){
         ret = GPIO_pin_write_logic( &(segment->segment_pins[3]), ( (number >> 3) & 0x01) );
     }
     return ret;
-};
+}
