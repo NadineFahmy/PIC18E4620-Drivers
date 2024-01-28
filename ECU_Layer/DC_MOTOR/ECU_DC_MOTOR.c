@@ -20,7 +20,7 @@ Std_ReturnType DC_MOTOR_inti(const dc_motor_t *dc_motor){
         GPIO_pin_inti(&(dc_motor->dc_motor_pin[1]));
     }
     return ret;
-};
+}
 
 Std_ReturnType DC_MOTOR_Move_Right(const dc_motor_t *dc_motor){
     Std_ReturnType ret = E_OK;
@@ -33,7 +33,7 @@ Std_ReturnType DC_MOTOR_Move_Right(const dc_motor_t *dc_motor){
         GPIO_pin_write_logic(&(dc_motor->dc_motor_pin[1]), LOW);
     }
     return ret;
-};
+}
 
 Std_ReturnType DC_MOTOR_Move_Left(const dc_motor_t *dc_motor){
     Std_ReturnType ret = E_OK;
@@ -46,7 +46,7 @@ Std_ReturnType DC_MOTOR_Move_Left(const dc_motor_t *dc_motor){
         GPIO_pin_write_logic(&(dc_motor->dc_motor_pin[1]), HIGH);
     }
     return ret;
-};
+}
 
 Std_ReturnType DC_MOTOR_Stop(const dc_motor_t *dc_motor){
     Std_ReturnType ret = E_OK;
@@ -59,4 +59,4 @@ Std_ReturnType DC_MOTOR_Stop(const dc_motor_t *dc_motor){
         GPIO_pin_write_logic(&(dc_motor->dc_motor_pin[1]), LOW);
     }
     return ret;
-};
+}
