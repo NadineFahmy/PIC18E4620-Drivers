@@ -25,14 +25,14 @@ void __interrupt() InterruptManagerHigh(void){
     
     else { }
     
-};
+}
 
 void __interrupt(low_priority) InterruptManagerLow(void){
     if((INTCON3bits.INT1E == INT_ENABLE) && (INT_OCCUR == INTCON3bits.INT1F)){
         INT1_ISR();
     }
     else { }
-};
+}
 
 #else
 
