@@ -39,7 +39,7 @@ Std_ReturnType EUSART_ASYNC_Init(const usart_t *_eusart){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 Std_ReturnType EUSART_ASYNC_DeInit(const usart_t *_eusart){
     Std_ReturnType ret = E_NOT_OK;
@@ -53,7 +53,7 @@ Std_ReturnType EUSART_ASYNC_DeInit(const usart_t *_eusart){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 Std_ReturnType EUSART_ASYNC_ReadByteBlocking(u8 *_data){
     Std_ReturnType ret = E_NOT_OK;
@@ -63,7 +63,7 @@ Std_ReturnType EUSART_ASYNC_ReadByteBlocking(u8 *_data){
 #endif    
     *_data = RCREG;
     return ret;
-};
+}
 
 Std_ReturnType EUSART_ASYNC_ReadByteNonBlocking(u8 *_data){
     Std_ReturnType ret = E_NOT_OK;
@@ -76,7 +76,7 @@ Std_ReturnType EUSART_ASYNC_ReadByteNonBlocking(u8 *_data){
     }
 
     return ret;
-};
+}
 
 Std_ReturnType EUSART_ASYNC_Restart_RX(void){
     Std_ReturnType ret = E_OK;
@@ -85,7 +85,7 @@ Std_ReturnType EUSART_ASYNC_Restart_RX(void){
     RCSTAbits.CREN = 1;
 
     return ret;
-};
+}
 
 Std_ReturnType EUSART_ASYNC_WriteByteBlockinge(u8 _data){
     Std_ReturnType ret = E_OK;
@@ -94,7 +94,7 @@ Std_ReturnType EUSART_ASYNC_WriteByteBlockinge(u8 _data){
     TXREG = _data;
     
     return ret;
-};
+}
 
 Std_ReturnType EUSART_ASYNC_WriteStringBlockinge(u8 *_data, u16 str_length){
     Std_ReturnType ret = E_OK;
@@ -152,7 +152,7 @@ static void EUSART_BaudRate_Calculation(const usart_t *_eusart){
     }
     SPBRG = (u8)((u32)BaudRate_Temp);
     SPBRGH = (u8)(((u32)BaudRate_Temp) >> 8);
-};
+}
 
 static void EUSART_ASYNC_TX_Init(const usart_t *_eusart){
     if(EUSART_ASYNC_TX_ENABLE == _eusart->usart_tx_cfg.usart_tx_enable){
@@ -196,7 +196,7 @@ if(EUSART_ASYNC_INTERRUPT_TX_ENABLE == _eusart->usart_tx_cfg.usart_tx_interrupt_
     }
     
     
-};
+}
 
 static void EUSART_ASYNC_RX_Init(const usart_t *_eusart){
     if(EUSART_ASYNC_RX_ENABLE == _eusart->usart_rx_cfg.usart_rx_enable){
@@ -242,7 +242,7 @@ static void EUSART_ASYNC_RX_Init(const usart_t *_eusart){
     }
     else { }
     }
-};
+}
 
 void EUSART_TX_ISR(void){
     PIE1bits.TXIE = 0;
@@ -252,7 +252,7 @@ void EUSART_TX_ISR(void){
     else {
         
     }
-};
+}
 
 void EUSART_RX_ISR(void){
     if(EUSART_RxInterruptHandler){
@@ -269,4 +269,4 @@ void EUSART_RX_ISR(void){
         EUSART_OverrunErrorHandler();
     }
     else { }
-};
+}
