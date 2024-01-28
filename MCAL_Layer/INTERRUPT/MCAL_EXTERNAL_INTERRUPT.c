@@ -64,28 +64,28 @@ Std_ReturnType INT_INTx_Inti(const INT_INTx_t *int_obj){
     }
     
     return ret;
-};
+}
 
 void INT0_ISR(void){
     EXT_INT0_INTERRUPTFlagClear();
     
     if(INT0_InterruptHandler){ INT0_InterruptHandler(); }
     else {}
-};
+}
 
 void INT1_ISR(void){
     EXT_INT1_INTERRUPTFlagClear();
     
     if(INT1_InterruptHandler){ INT1_InterruptHandler(); }
     else {}
-};
+}
 
 void INT2_ISR(void){
     EXT_INT2_INTERRUPTFlagClear();
     
     if(INT2_InterruptHandler){ INT2_InterruptHandler(); }
     else {}
-};
+}
 
 void RB4_ISR(u8 RB4_Source){
   EXT_RBx_INTERRUPTFlagClear();  
@@ -99,7 +99,7 @@ void RB4_ISR(u8 RB4_Source){
       else {}
   }
   else {}
-};
+}
 
 void RB5_ISR(u8 RB5_Source){
   EXT_RBx_INTERRUPTFlagClear();  
@@ -113,7 +113,7 @@ void RB5_ISR(u8 RB5_Source){
       else {}
   }
   else {}
-};
+}
 
 void RB6_ISR(u8 RB6_Source){
    EXT_RBx_INTERRUPTFlagClear();  
@@ -127,7 +127,7 @@ void RB6_ISR(u8 RB6_Source){
       else {}
   }
   else {}
-};
+}
 
 void RB7_ISR(u8 RB7_Source){
     EXT_RBx_INTERRUPTFlagClear(); 
@@ -141,7 +141,7 @@ void RB7_ISR(u8 RB7_Source){
       else {}
   }
   else {}
-};
+}
 
 Std_ReturnType INT_INTx_DeInti(const INT_INTx_t *int_obj){
     
@@ -156,7 +156,7 @@ Std_ReturnType INT_INTx_DeInti(const INT_INTx_t *int_obj){
     }
     
     return ret;
-};
+}
 
 Std_ReturnType INT_RBx_Inti(const INT_RBx_t *int_obj){
     
@@ -218,7 +218,7 @@ Std_ReturnType INT_RBx_Inti(const INT_RBx_t *int_obj){
     }
     
     return ret;   
-};
+}
 
 Std_ReturnType INT_RBx_DeInti(const INT_RBx_t *int_obj){
    
@@ -233,7 +233,7 @@ Std_ReturnType INT_RBx_DeInti(const INT_RBx_t *int_obj){
     }
     
     return ret;
-};
+}
 
 static Std_ReturnType INT_INTx_Enable(const INT_INTx_t *int_obj){
     
@@ -285,11 +285,11 @@ static Std_ReturnType INT_INTx_Enable(const INT_INTx_t *int_obj){
             break;
             
             default : ret = E_NOT_OK;
-        };
+        }
     }
     
     return ret;
-};
+}
 
 static Std_ReturnType INT_INTx_Disable(const INT_INTx_t *int_obj){
     
@@ -321,7 +321,7 @@ static Std_ReturnType INT_INTx_Disable(const INT_INTx_t *int_obj){
     }
     
     return ret;
-};
+}
 
 #if INT_PRIORITY_Levels_Enable==INT_FEATURE_ENABLE
 static Std_ReturnType INT_INTx_Priority_Inti(const INT_INTx_t *int_obj){
@@ -349,11 +349,11 @@ static Std_ReturnType INT_INTx_Priority_Inti(const INT_INTx_t *int_obj){
             break;
             
             default : ret = E_NOT_OK;
-        };
+        }
     }
     
     return ret;
-};
+}
 #endif
 
 static Std_ReturnType INT_INTx_Edge_Inti(const INT_INTx_t *int_obj){
@@ -392,7 +392,7 @@ static Std_ReturnType INT_INTx_Edge_Inti(const INT_INTx_t *int_obj){
     }
     
     return ret;
-};
+}
 
 static Std_ReturnType INT_INTx_Pin_Inti(const INT_INTx_t *int_obj){
     
@@ -407,7 +407,7 @@ static Std_ReturnType INT_INTx_Pin_Inti(const INT_INTx_t *int_obj){
     }
     
     return ret;
-};
+}
 
 static Std_ReturnType INT_RBx_Enable(const INT_RBx_t *int_obj);
 
@@ -447,7 +447,7 @@ static Std_ReturnType INT_INTx_Clear_Flag(const INT_INTx_t *int_obj){
     }
     
     return ret;
-};
+}
 
 static Std_ReturnType INT0_SetInterruptHandler(void (*InterruptHandler)(void)){
     
@@ -462,7 +462,7 @@ static Std_ReturnType INT0_SetInterruptHandler(void (*InterruptHandler)(void)){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 static Std_ReturnType INT1_SetInterruptHandler(void (*InterruptHandler)(void)){
     
@@ -477,7 +477,7 @@ static Std_ReturnType INT1_SetInterruptHandler(void (*InterruptHandler)(void)){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 static Std_ReturnType INT2_SetInterruptHandler(void (*InterruptHandler)(void)){
     
@@ -492,7 +492,7 @@ static Std_ReturnType INT2_SetInterruptHandler(void (*InterruptHandler)(void)){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 static Std_ReturnType INT_INTx_SetInterruptHandler(const INT_INTx_t *int_obj){
     
@@ -542,8 +542,8 @@ static Std_ReturnType INT_INTx_SetInterruptHandler(const INT_INTx_t *int_obj){
             break;
             
             default : ret = E_NOT_OK;
-        };
+        }
     }
     
     return ret;
-};
+}
