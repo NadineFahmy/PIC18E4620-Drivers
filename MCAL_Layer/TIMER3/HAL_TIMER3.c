@@ -1,7 +1,7 @@
 
 /* 
  * File:   HAL_TIMER3.c
- * Author: yoga
+ * Author: Nadine
  *
  * Created on November 25, 2023, 6:37 PM
  */
@@ -56,7 +56,7 @@ Std_ReturnType TMR3_Inti(const timer3_t *_timer){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 Std_ReturnType TMR3_DeInti(const timer3_t *_timer){
     Std_ReturnType ret = E_NOT_OK;
@@ -73,7 +73,7 @@ Std_ReturnType TMR3_DeInti(const timer3_t *_timer){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 Std_ReturnType TMR3_Write_Value(const timer3_t *_timer, u16 _value){
     Std_ReturnType ret = E_NOT_OK;
@@ -87,7 +87,7 @@ Std_ReturnType TMR3_Write_Value(const timer3_t *_timer, u16 _value){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 Std_ReturnType TMR3_Read_Value(const timer3_t *_timer, u16 *_value){
     Std_ReturnType ret = E_NOT_OK;
@@ -103,7 +103,7 @@ Std_ReturnType TMR3_Read_Value(const timer3_t *_timer, u16 *_value){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 void TMR3_ISR(void){
     TMR3_INTERRUPTFlagClear();
@@ -112,7 +112,7 @@ void TMR3_ISR(void){
     if(TMR3_InterruptHandler){
         TMR3_InterruptHandler();
     }
-};
+}
 
 static inline void Timer3_Mode_Select(const timer3_t *_timer){
     if(TIMER3_TIMER_MODE == _timer->timer3_mode){
@@ -131,4 +131,4 @@ static inline void Timer3_Mode_Select(const timer3_t *_timer){
         else{}
     }
     else{}
-};
+}
