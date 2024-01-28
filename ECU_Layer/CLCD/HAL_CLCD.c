@@ -43,7 +43,7 @@ Std_ReturnType lcd_4bit_intialize(const chr_lcd_4bit_t *lcd){
         ret = lcd_4bit_send_command(lcd, 0x80);
     }
     return ret;
-};
+}
 
 Std_ReturnType lcd_4bit_send_command(const chr_lcd_4bit_t *lcd, u8 command){
     Std_ReturnType ret = E_OK;
@@ -64,7 +64,7 @@ Std_ReturnType lcd_4bit_send_command(const chr_lcd_4bit_t *lcd, u8 command){
         ret = lcd_4bit_send_enable_signal(lcd);
     }
     return ret;
-};
+}
 
 Std_ReturnType lcd_4bit_send_char_data(const chr_lcd_4bit_t *lcd, u8 data){
     Std_ReturnType ret = E_OK;
@@ -85,7 +85,7 @@ Std_ReturnType lcd_4bit_send_char_data(const chr_lcd_4bit_t *lcd, u8 data){
         ret = lcd_4bit_send_enable_signal(lcd);
     }
     return ret;
-};
+}
 
 Std_ReturnType lcd_4bit_send_char_data_pos(const chr_lcd_4bit_t *lcd,u8 row, u8 column, u8 data){
     Std_ReturnType ret = E_OK;
@@ -97,7 +97,7 @@ Std_ReturnType lcd_4bit_send_char_data_pos(const chr_lcd_4bit_t *lcd,u8 row, u8 
         ret = lcd_4bit_send_char_data(lcd, data);
     }
     return ret;
-};
+}
 
 Std_ReturnType lcd_4bit_send_string(const chr_lcd_4bit_t *lcd, u8 *str){
     Std_ReturnType ret = E_OK;
@@ -110,7 +110,7 @@ Std_ReturnType lcd_4bit_send_string(const chr_lcd_4bit_t *lcd, u8 *str){
         }
     }
     return ret;
-};
+}
 
 Std_ReturnType lcd_4bit_send_string_pos(const chr_lcd_4bit_t *lcd, u8 row, u8 column, u8 *str){
     Std_ReturnType ret = E_OK;
@@ -124,7 +124,7 @@ Std_ReturnType lcd_4bit_send_string_pos(const chr_lcd_4bit_t *lcd, u8 row, u8 co
         }
     }
     return ret;
-};
+}
 
 
 Std_ReturnType lcd_4bit_send_custom_char(const chr_lcd_4bit_t *lcd, u8 row, u8 column, 
@@ -142,7 +142,7 @@ Std_ReturnType lcd_4bit_send_custom_char(const chr_lcd_4bit_t *lcd, u8 row, u8 c
         ret = lcd_4bit_send_char_data_pos(lcd, row, column, mem_pos);
     }
     return ret;
-};
+}
 
 Std_ReturnType lcd_8bit_intialize(const chr_lcd_8bit_t *lcd){
     Std_ReturnType ret = E_OK;
@@ -171,7 +171,7 @@ Std_ReturnType lcd_8bit_intialize(const chr_lcd_8bit_t *lcd){
         ret = lcd_8bit_send_command(lcd, 0x80);
     }
     return ret;
-};
+}
 
 Std_ReturnType lcd_8bit_send_command(const chr_lcd_8bit_t *lcd, u8 command){
     Std_ReturnType ret = E_OK;
@@ -191,7 +191,7 @@ Std_ReturnType lcd_8bit_send_command(const chr_lcd_8bit_t *lcd, u8 command){
         ret = lcd_8bit_send_enable_signal(lcd);
     }
     return ret;
-};
+}
 
 Std_ReturnType lcd_8bit_send_char_data(const chr_lcd_8bit_t *lcd, u8 data){
     Std_ReturnType ret = E_OK;
@@ -211,7 +211,7 @@ Std_ReturnType lcd_8bit_send_char_data(const chr_lcd_8bit_t *lcd, u8 data){
         ret = lcd_8bit_send_enable_signal(lcd);
     }
     return ret;
-};
+}
 
 Std_ReturnType lcd_8bit_send_char_data_pos(const chr_lcd_8bit_t *lcd,u8 row, u8 column, u8 data){
     Std_ReturnType ret = E_OK;
@@ -223,7 +223,7 @@ Std_ReturnType lcd_8bit_send_char_data_pos(const chr_lcd_8bit_t *lcd,u8 row, u8 
         ret = lcd_8bit_send_char_data(lcd, data);
     }
     return ret;
-};
+}
 
 Std_ReturnType lcd_8bit_send_string(const chr_lcd_8bit_t *lcd, u8 *str){
     Std_ReturnType ret = E_OK;
