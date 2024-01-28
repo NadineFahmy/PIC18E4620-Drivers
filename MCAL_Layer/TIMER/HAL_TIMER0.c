@@ -61,7 +61,7 @@ Std_ReturnType TMR0_Inti(const timer0_t *_timer){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 Std_ReturnType TMR0_DeInti(const timer0_t *_timer){
     
@@ -80,7 +80,7 @@ Std_ReturnType TMR0_DeInti(const timer0_t *_timer){
         ret = E_OK;
     }
     return ret;
-};
+}
 
 Std_ReturnType TMR0_Write_Value(const timer0_t *_timer, u16 _value){
     
@@ -98,7 +98,7 @@ Std_ReturnType TMR0_Write_Value(const timer0_t *_timer, u16 _value){
     }
 
     return ret;
-};
+}
 
 Std_ReturnType TMR0_Read_Value(const timer0_t *_timer, u16 *_value){
     
@@ -117,7 +117,7 @@ Std_ReturnType TMR0_Read_Value(const timer0_t *_timer, u16 *_value){
     }
 
     return ret;
-};
+}
 
 void TMR0_ISR(void){
     TMR0_INTERRUPTFlagClear();
@@ -126,7 +126,7 @@ void TMR0_ISR(void){
     if(TMR0_InterruptHandler){
         TMR0_InterruptHandler();
     }
-};
+}
 
 static inline void Timer0_Prescaler_Config(const timer0_t *_timer){
     if(TIMER0_PRESCALER_ENABLE_CFG == _timer->prescaler_enable){
@@ -139,7 +139,7 @@ static inline void Timer0_Prescaler_Config(const timer0_t *_timer){
     }
     
     else{}
-};
+}
 
 static inline void Timer0_Mode_Select(const timer0_t *_timer){
     if(TIMER0_TIMER_MODE == _timer->timer0_mode){
@@ -158,7 +158,7 @@ static inline void Timer0_Mode_Select(const timer0_t *_timer){
         else{}
     }
     else{}
-};
+}
 
 static inline void Timer0_Register_Size(const timer0_t *_timer){
     if(TIMER0_8BIT_REGISTER_MODE == _timer->timer0_register_size){
@@ -170,4 +170,4 @@ static inline void Timer0_Register_Size(const timer0_t *_timer){
     }
     
     else{}
-};
+}
