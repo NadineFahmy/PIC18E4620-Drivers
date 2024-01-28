@@ -26,7 +26,7 @@ Std_ReturnType LED_inti(const led_t *led){
         GPIO_pin_inti(&pin_obj);
     }      
     return ret;
-};
+}
 
 Std_ReturnType LED_turn_on(const led_t *led){
     
@@ -47,7 +47,7 @@ Std_ReturnType LED_turn_on(const led_t *led){
         
     }      
     return ret;
-};
+}
 
 Std_ReturnType LED_turn_off(const led_t *led){
     
@@ -67,7 +67,7 @@ Std_ReturnType LED_turn_off(const led_t *led){
         GPIO_pin_write_logic(&pin_obj, LOW);
     }      
     return ret;
-};
+}
 
 Std_ReturnType LED_tog(const led_t *led){
     
@@ -87,4 +87,4 @@ Std_ReturnType LED_tog(const led_t *led){
         GPIO_pin_tog_logic (&pin_obj);
     }      
     return ret;
-};
+}
