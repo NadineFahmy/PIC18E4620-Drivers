@@ -32,7 +32,7 @@ Std_ReturnType GPIO_pin_dir_inti(const pin_config_t *_pin_config_t){
         }        
     }
     return ret;
-};
+}
 
 Std_ReturnType GPIO_pin_get_dir_status(const pin_config_t *_pin_config_t, direction_t *dir_status) {
     
@@ -46,7 +46,7 @@ Std_ReturnType GPIO_pin_get_dir_status(const pin_config_t *_pin_config_t, direct
         *dir_status = READ_BIT(*tris_register[_pin_config_t->port], _pin_config_t->pin);
     }
     return ret;
-};
+}
 
 Std_ReturnType GPIO_pin_write_logic(const pin_config_t *_pin_config_t, logic_t logic) {
     
@@ -70,7 +70,7 @@ Std_ReturnType GPIO_pin_write_logic(const pin_config_t *_pin_config_t, logic_t l
         }        
     }
     return ret;
-};
+}
 
 Std_ReturnType GPIO_pin_read_logic(const pin_config_t *_pin_config_t, logic_t *logic) {
     
@@ -83,7 +83,7 @@ Std_ReturnType GPIO_pin_read_logic(const pin_config_t *_pin_config_t, logic_t *l
         *logic = READ_BIT(*port_register[_pin_config_t->port], _pin_config_t->pin);
     }
     return ret;
-};
+}
 
 Std_ReturnType GPIO_pin_tog_logic(const pin_config_t *_pin_config_t) {
     
@@ -96,7 +96,7 @@ Std_ReturnType GPIO_pin_tog_logic(const pin_config_t *_pin_config_t) {
         TOG_BIT(*lat_register[_pin_config_t->port], _pin_config_t->pin);
     }
     return ret;
-};
+}
 
 Std_ReturnType GPIO_pin_inti(const pin_config_t *_pin_config_t){
     Std_ReturnType ret = E_OK;
@@ -109,7 +109,7 @@ Std_ReturnType GPIO_pin_inti(const pin_config_t *_pin_config_t){
         ret = GPIO_pin_write_logic(_pin_config_t, _pin_config_t->logic);
     }
     return ret;
-};
+}
 
 
 
@@ -124,7 +124,7 @@ Std_ReturnType GPIO_port_dir_inti(port_index_t port, u8 direction) {
         *tris_register[port] = direction;
     }
     return ret;
-};
+}
 
 Std_ReturnType GPIO_port_get_dir_status(port_index_t port, u8 *dir_status) {
     
@@ -137,7 +137,7 @@ Std_ReturnType GPIO_port_get_dir_status(port_index_t port, u8 *dir_status) {
         *dir_status = *tris_register[port];
     }
     return ret;
-};
+}
 
 Std_ReturnType GPIO_port_write_logic(port_index_t port, u8 logic) {
     
@@ -150,7 +150,7 @@ Std_ReturnType GPIO_port_write_logic(port_index_t port, u8 logic) {
         *lat_register[port] = logic;
     }
     return ret;
-};
+}
 
 Std_ReturnType GPIO_port_read_logic(port_index_t port, u8 *logic) {
     
@@ -163,7 +163,7 @@ Std_ReturnType GPIO_port_read_logic(port_index_t port, u8 *logic) {
         *logic = *lat_register[port];
     }
     return ret;
-};
+}
 
 Std_ReturnType GPIO_port_tog_logic(port_index_t port){
     
@@ -176,4 +176,4 @@ Std_ReturnType GPIO_port_tog_logic(port_index_t port){
         *lat_register[port] = *lat_register[port] ^ PORT_MASK;
     }
     return ret;
-};
+}
