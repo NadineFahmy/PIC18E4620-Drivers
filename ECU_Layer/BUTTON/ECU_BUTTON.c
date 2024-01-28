@@ -18,7 +18,7 @@ Std_ReturnType BUTTON_inti(const button_t *btn){
         ret = GPIO_pin_dir_inti(&(btn->button_pin));
     }      
     return ret;
-};
+}
 
 Std_ReturnType BUTTON_read(const button_t *btn, button_status_t *btn_state){
     
@@ -59,4 +59,4 @@ Std_ReturnType BUTTON_read(const button_t *btn, button_status_t *btn_state){
         ret = E_OK;
     }      
     return ret;
-};
+}
