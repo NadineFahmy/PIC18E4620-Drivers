@@ -106,7 +106,7 @@ void TMR1_ISR(void){
     if(TMR1_InterruptHandler){
         TMR1_InterruptHandler();
     }
-};
+}
 
 static inline void Timer1_Mode_Select(const timer1_t *_timer){
     if(TIMER1_TIMER_MODE == _timer->timer1_mode){
@@ -125,4 +125,4 @@ static inline void Timer1_Mode_Select(const timer1_t *_timer){
         else{}
     }
     else{}
-};
+}
