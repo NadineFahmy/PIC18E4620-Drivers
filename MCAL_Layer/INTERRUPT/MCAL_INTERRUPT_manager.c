@@ -183,6 +183,6 @@ void __interrupt() InterruptManager(void){
     
     else { }
     
-};
+}
 
 #endif
