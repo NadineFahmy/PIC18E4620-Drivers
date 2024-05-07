@@ -317,7 +317,7 @@ static Std_ReturnType INT_INTx_Disable(const INT_INTx_t *int_obj){
             break;
             
             default : ret = E_NOT_OK;
-        };
+        }
     }
     
     return ret;
@@ -388,7 +388,7 @@ static Std_ReturnType INT_INTx_Edge_Inti(const INT_INTx_t *int_obj){
             break;
             
             default : ret = E_NOT_OK;
-        };
+        }
     }
     
     return ret;
@@ -443,7 +443,7 @@ static Std_ReturnType INT_INTx_Clear_Flag(const INT_INTx_t *int_obj){
             break;
             
             default : ret = E_NOT_OK;
-        };
+        }
     }
     
     return ret;
